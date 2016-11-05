@@ -1,5 +1,6 @@
 docker-spamassassin
 ===================
+thanks: dinkel
 
 SpamAssassin as a Docker image. It runs `spamd` on exposed port `783` and
 constantly updates its ruleset.
@@ -7,11 +8,11 @@ constantly updates its ruleset.
 Usage
 -----
 
-    docker run -d -p 783:783 dinkel/spamassassin
+    docker run -d -p 783:783 babim/spamassassin
 
 or linked (this is how I use it)
 
-    docker run -d --name spamassassin dinkel/spamassassin
+    docker run -d --name spamassassin babim/spamassassin
     docker run -d --link spamassassin:spamassassin application-with-spamc-or-something
 
 Configuration (environment variables)
