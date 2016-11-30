@@ -1,14 +1,12 @@
 FROM babim/debianbase
 
-ENV SPAMASSASSIN_VERSION 3.4.1
-
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
         libmail-dkim-perl \
         libnet-ident-perl \
         pyzor \
         razor \
-        spamassassin=${SPAMASSASSIN_VERSION}* && \
+        spamassassin && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
