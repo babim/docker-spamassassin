@@ -1,4 +1,4 @@
-FROM babim/debianbase
+FROM babim/debianbase:8
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
